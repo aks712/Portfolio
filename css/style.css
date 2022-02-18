@@ -75,10 +75,12 @@ section
 {
     align-items: center;
 }
+/*
 .hidden
 {
     display: none !important;
 }
+*/
 
 .sec-padding
 {
@@ -89,7 +91,6 @@ section
 {
     padding: 0 15px;
     width: 100%;
-<<<<<<< HEAD
     text-align: center;
     margin-bottom: 40px;
 }
@@ -120,6 +121,10 @@ section
 }
 
 /*------------------buttons-------------------*/
+buttons{
+    font-family: inherit;
+    user-select: none;
+}
 .btn
 {
     line-height: 1.5;
@@ -241,4 +246,51 @@ home-img{
     text-transform: capitalize;
     margin: 0 10px 10px 0;
     border-radius: 20px;
+}
+.about-tabs
+{
+    margin-top: 20px;
+}
+.about-tabs .tab-item{
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: darkblue;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0 20px 0 0;
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    
+}
+.about-tabs .tab-item:last-child
+{
+    margin: 0;
+}
+.about-tabs .tab-item::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: darkblue;
+    transition: width 0.3s ease;
+}
+.about-tabs .tab-item:hover::before{
+    width: 100%;
+}
+.about-tabs .tab-item.active::before{
+    width: 100%;
+    background-color: #e02f6b;
+}
+.about-tabs .tab-item.active
+{
+    color: #e02f6b;
+    opacity: 1;
+    cursor: auto;
 }
